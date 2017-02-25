@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header android:fragment="com.dimitri.geonet.geonet.PreferenceWindow$UserPreferences"
+        android:icon="@drawable/settings24"
+        android:title="Prefs 1"
+        android:summary="An example of some preferences." />
+
+
+
+</preference-headers>

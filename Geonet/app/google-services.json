@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "810571726992",
+    "project_id": "geonet-55a93"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810571726992:android:5b9e2d2973bbac19",
+        "android_client_info": {
+          "package_name": "com.dimitri.geonet.geonet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810571726992-d50kbj97s4dvqj9c0o2r2hpduc9ttno7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dimitri.geonet.geonet",
+            "certificate_hash": "FA86F111A5F666C5D1C4AF1F5703BB564A3AC85F"
+          }
+        },
+        {
+          "client_id": "810571726992-6c3bemveg0lglcqu65k4ih6havll7idh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1L-uPdxAqPZjCtn8MLLRFYd1j7_qWCpk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
