@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.dimitri.geonet.geonet.TabActivity">
     <item
+        android:id="@+id/action_friendrequest"
+        android:orderInCategory="100"
+        android:title="@string/action_friendrequest"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_addfriend"
+        android:orderInCategory="100"
+        android:title="@string/action_addfriend"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

@@ -36,6 +36,7 @@ public class ConfigActivity extends AppCompatActivity {
                     case 600000: {index=2;}break;
                     case 900000: {index=3;}break;
                     case 1800000: {index=4;}break;
+                    case 3600000: {index=5;}break;
 
 
                 }
@@ -63,12 +64,55 @@ public class ConfigActivity extends AppCompatActivity {
                                 dialog.dismiss();
                                 Toast.makeText(getApplicationContext(),"Los cambios han sido guardados",Toast.LENGTH_SHORT).show();
                             }
-                        })
+                        }).setTitle("Elija la frequencia")
                         .show();
 
             }
         });
+        RelativeLayout rl2 = (RelativeLayout) findViewById(R.id.distance_setting);
+        rl2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int intervalo = SessionHandler.getDistance(getApplicationContext());
+                int index = 0;
+                switch (intervalo)
+                {
+                    case 1: {index=1;}break;
+                    case 10: {index=2;}break;
+                    case 20: {index=3;}break;
+                    case 50: {index=4;}break;
+                    case 100: {index=5;}break;
 
+
+                }
+                new AlertDialog.Builder(ConfigActivity.this)
+                        .setSingleChoiceItems(R.array.pref_sync_distance_titles, index, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        }).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                                ListView lw = ((AlertDialog)dialog).getListView();
+//                                Object checkedItem = lw.getAdapter().getItem(lw.getCheckedItemPosition());
+                        ListView lw = ((AlertDialog)dialog).getListView();
+                        int choice = lw.getCheckedItemPosition();
+                        int[]vals = getResources().getIntArray(R.array.pref_sync_distance_values);
+                        int intervalo = vals[choice];
+                        if(getApplicationContext() == null)
+                        {
+                            return;
+                        }
+                        SessionHandler.setDistance(getApplicationContext(),intervalo);
+
+                        dialog.dismiss();
+                        Toast.makeText(getApplicationContext(),"Los cambios han sido guardados",Toast.LENGTH_SHORT).show();
+                    }
+                }).setTitle("Elija la Distancia")
+                        .show();
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

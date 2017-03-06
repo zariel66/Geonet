@@ -1,0 +1,68 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        tools:context="com.dimitri.geonet.geonet.ProfileFragment"
+        android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_marginStart="14dp"
+        android:layout_height="80dp"
+        android:id="@+id/perdata"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_alignParentStart="true"
+        android:layout_width="225dp">
+
+        <TextView
+            android:text="Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombreper"
+            android:textSize="12sp" />
+
+        <TextView
+            android:text="Correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/correoper"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="11dp"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:text="@string/eventlabeldescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView20"
+        android:layout_marginTop="34dp"
+        android:layout_below="@id/perdata"
+        android:layout_alignStart="@id/perdata"
+        android:textStyle="normal|bold" />
+
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView20"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/profilemap"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/template_profile_pic"
+        android:layout_marginEnd="18dp"
+        android:id="@+id/imageView5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+
+
+

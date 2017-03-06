@@ -48,9 +48,19 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         });
         if(SessionHandler.isLoggedIn(getApplicationContext()))
         {
+            SessionHandler.SessionHandlerConstruct2(getApplicationContext());
+//            SessionHandler.deleteContacts(getApplicationContext());
+            DbHandler.loadContacts(getApplicationContext());
+            try {
+                //Toast.makeText(getApplicationContext(),"Cargando..",Toast.LENGTH_SHORT).show();
+                Thread.sleep(2500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Intent loginIntent = new Intent(this, TabActivity.class);
             loginIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             this.startActivity(loginIntent);
+
             finish();
         }
     }
@@ -99,17 +109,26 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                             if(status.equals("vacio"))
                             {
                                 DbHandler.registerUser(acct,getApplicationContext());
-                                Toast.makeText(getApplicationContext(),"SE LO REGISTRO",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
                             }
                             else
                             {
                                 SessionHandler.setRegistered(getApplicationContext());
-                                Toast.makeText(getApplicationContext(),"ESTA REGISTRADO PERO NO SABIA",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Inicio Exitoso",Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (JSONException e) {
                             SessionHandler.setRegistered(getApplicationContext());
-                            Toast.makeText(getApplicationContext(),"ESTA REGISTRADO PERO NO SABIA",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Inicio Exitoso",Toast.LENGTH_SHORT).show();
+
+                            e.printStackTrace();
+                        }
+//                        SessionHandler.deleteContacts(getApplicationContext());
+                        DbHandler.loadContacts(getApplicationContext());
+                        try {
+                            //Toast.makeText(getApplicationContext(),"Cargando..",Toast.LENGTH_SHORT).show();
+                            Thread.sleep(2500);
+                        } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                         Intent loginIntent = new Intent(getApplicationContext(), TabActivity.class);

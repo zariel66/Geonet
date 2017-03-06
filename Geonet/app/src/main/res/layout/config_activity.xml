@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/interval_setting"
         android:background="@drawable/bottom_border"
 
-        android:paddingBottom="8dp">
-
-        <TextView
-            android:text="Intervalo de Sincronización"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:layout_marginStart="22dp"
-
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="19dp"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="Ajusta el intervalo de tiempo para reportar tus ubicaciones. Ayuda a un menor consumo de bateria y datos. "
@@ -32,12 +21,79 @@
 
             android:layout_marginTop="15dp"
             android:layout_below="@+id/textView8"
-            android:layout_alignStart="@+id/textView8"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="fill_horizontal"
-            android:textSize="13sp"/>
+            android:textSize="13sp"
+            android:layout_alignStart="@+id/textView8" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_alarm"
+            android:layout_alignTop="@+id/textView8"
+            android:id="@+id/imageView"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Frecuencia de Sincronización"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_marginStart="12dp"
+
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/distance_setting"
+        android:background="@drawable/bottom_border"
+
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/interval_setting"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Ajusta la distancia con la que el GPS reporta una nueva ubicación para tus contactos"
+            android:id="@+id/textView12"
+
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:textSize="13sp"
+            android:layout_alignStart="@+id/textView11" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/distance_icon"
+            android:layout_alignTop="@+id/textView11"
+            android:id="@+id/imageView2"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Distancia de Reporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:layout_marginStart="12dp"
+
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView2" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

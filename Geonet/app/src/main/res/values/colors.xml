@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#40a6ff</color>
+    <color name="colorAccent">#31c5c5</color>
     <color name="bckgr">#038b76</color>
+    <color name="celestefondo">#009688</color>
 </resources>

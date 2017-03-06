@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:background="@drawable/bottom_border"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="57dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageView3" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:text="Solicitud de Contacto"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:gravity="center_vertical|left"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:id="@+id/notification_message"
+                android:gravity="center_vertical|left"
+                android:text="demo" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:text="Rechazar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/reject_request"
+            android:background="@color/colorAccent"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:padding="8dp"
+            android:layout_marginEnd="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/accept_request" />
+
+        <Button
+            android:text="Aceptar"
+            android:layout_width="wrap_content"
+            android:id="@+id/accept_request"
+            android:background="@color/colorAccent"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:padding="8dp"
+            android:layout_marginEnd="84dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</LinearLayout>
